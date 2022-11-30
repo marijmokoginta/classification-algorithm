@@ -104,7 +104,7 @@ public class SiswaApplication {
                     .setMinat(new Minat(values[12]))
                     .setJurusan(Jurusan.valueOf(values[13]))
                     .build();
-            siswaKNN.predict(siswa, 15);
+            siswaKNN.predict(siswa, 20);
             if (siswa.getJurusan() == siswa.getJurusanPredict()) {
                 System.out.println("jurusan : " + siswa.getJurusan() + ", prediksi : " + siswa.getJurusanPredict() + " -> correct");
                 correct++;
@@ -176,5 +176,4 @@ public class SiswaApplication {
 
         input.close();
     }
-
 }

@@ -14,7 +14,7 @@ public record SiswaKNN(List<Siswa> dataset) {
 
         // distance
         for (Siswa data : dataset) {
-//            double x0 = data.getAgama() - datatest.getAgama();
+            double x0 = data.getAgama() - datatest.getAgama();
             double x1 = data.getPkn() - datatest.getPkn();
             double x2 = data.getBhs_indo() - datatest.getBhs_indo();
             double x3 = data.getMatematika() - datatest.getMatematika();
@@ -25,8 +25,8 @@ public record SiswaKNN(List<Siswa> dataset) {
             double x8 = data.getPenjas() - datatest.getPenjas();
             double x9 = data.getPrakarya() - datatest.getPrakarya();
             double x10 = data.getBhs_daerah() - datatest.getBhs_daerah();
-            double x11 = data.getMinat().getValue() - datatest.getMinat().getValue();
-            double sqd = (x1 * x1) + (x2 * x2) + (x3 * x3) + (x4 * x4) + (x5 * x5) + (x6 * x6) + (x7 * x7) + (x8 * x8) + (x9 * x9) + (x10 * x10) + (x11 * x11);
+//            double x11 = data.getMinat().getValue() - datatest.getMinat().getValue();
+            double sqd = (x1 * x1) + (x2 * x2) + (x3 * x3) + (x4 * x4) + (x5 * x5) + (x6 * x6) + (x7 * x7) + (x8 * x8) + (x9 * x9) + (x10 * x10);
             data.setDistance(sqd);
             dataDistance.add(data);
         }
